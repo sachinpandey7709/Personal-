@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKP Video Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header>
+    <h2>▶ SKP Video Library</h2>
+    <input type="search" id="search" placeholder="Search videos...">
+</header><nav>
+    <button onclick="filterVideos('All')">All Videos</button>
+    <button onclick="filterVideos('Movies')">Movies</button>
+    <button onclick="filterVideos('Education')">Education</button>
+    <button onclick="filterVideos('Music')">Music</button>
+    <button onclick="filterVideos('Personal')">Personal</button>
+    <button onclick="filterVideos('Favourites')">❤️ Favourites</button>
+</nav><main>
+    <section class="upload-box">
+        <h2>Upload Your Favourite Videos</h2>    <input type="file" id="videoFile" accept="video/*">
+
+    <input type="text" id="videoName"
+           placeholder="Enter video name">
+
+    <select id="category">
+        <option value="Movies">Movies</option>
+        <option value="Education">Education</option>
+        <option value="Music">Music</option>
+        <option value="Personal">Personal</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <button onclick="uploadVideo()">Upload Video</button>
+    <p id="status"></p>
+</section>
+
+<h2 class="heading">My Video Collection</h2>
+
+<div id="videoContainer" class="video-grid"></div>
+
+</main><div id="playerModal" class="modal">
+    <div class="player-box">
+        <button class="close" onclick="closePlayer()">✕</button>
+        <video id="videoPlayer" controls></video>
+        <h3 id="playerTitle"></h3>
+    </div>
+</div><script src="script.js"></script></body>
+</html>
