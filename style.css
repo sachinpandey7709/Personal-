@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  }
+
+body {
+background: #10131c;
+color: white;
+}
+
+header {
+background: #191e2b;
+padding: 20px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+}
+
+header h2 {
+color: #a99aff;
+}
+
+header input {
+width: 260px;
+padding: 12px;
+border-radius: 8px;
+border: none;
+}
+
+nav {
+display: flex;
+gap: 10px;
+padding: 20px 5%;
+flex-wrap: wrap;
+}
+
+button {
+background: #7665ed;
+color: white;
+border: none;
+padding: 11px 17px;
+border-radius: 7px;
+cursor: pointer;
+}
+
+button:hover {
+background: #5948d3;
+}
+
+main {
+padding: 20px 5%;
+}
+
+.upload-box {
+background: #1b2130;
+padding: 25px;
+border-radius: 12px;
+margin-bottom: 35px;
+}
+
+.upload-box h2 {
+margin-bottom: 20px;
+}
+
+.upload-box input,
+.upload-box select {
+padding: 12px;
+margin: 7px 5px 7px 0;
+border-radius: 7px;
+border: none;
+max-width: 100%;
+}
+
+.heading {
+margin-bottom: 20px;
+}
+
+.video-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+gap: 20px;
+}
+
+.video-card {
+background: #1b2130;
+padding: 12px;
+border-radius: 12px;
+}
+
+.video-card video {
+width: 100%;
+height: 155px;
+object-fit: cover;
+border-radius: 8px;
+cursor: pointer;
+background: black;
+}
+
+.video-card h3 {
+font-size: 16px;
+margin: 12px 0;
+overflow-wrap: anywhere;
+}
+
+.video-card p {
+color: #a9b0c0;
+font-size: 13px;
+margin-bottom: 10px;
+}
+
+.card-buttons {
+display: flex;
+gap: 7px;
+}
+
+.card-buttons button {
+flex: 1;
+padding: 9px 5px;
+}
+
+.delete {
+background: #d74755;
+}
+
+.favourite {
+background: #bd477c;
+}
+
+.modal {
+display: none;
+position: fixed;
+inset: 0;
+background: #000e;
+z-index: 10;
+justify-content: center;
+align-items: center;
+padding: 15px;
+}
+
+.player-box {
+width: min(900px, 100%);
+background: #191e2b;
+padding: 20px;
+border-radius: 12px;
+}
+
+.player-box video {
+width: 100%;
+max-height: 70vh;
+background: black;
+}
+
+.close {
+display: block;
+margin-left: auto;
+margin-bottom: 12px;
+}
+
+#status {
+margin-top: 12px;
+color: #8ee5b5;
+}
+
+@media(max-width: 600px) {
+header {
+flex-direction: column;
+align-items: stretch;
+}
+
+header input {
+    width: 100%;
+}
+
+nav {
+    padding: 15px;
+}
+
+main {
+    padding: 15px;
+}
+
+.upload-box input,
+.upload-box select {
+    width: 100%;
+    margin: 7px 0;
+}
+
+}
